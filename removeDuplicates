@@ -1,0 +1,13 @@
+string removedup(string str){
+    int length=str.length();
+
+    for(int i=0;i<length;i++){
+        for(int j=i+1; j<length;j++){
+            if(str[i]==str[j]){
+                str.erase (std::remove(str.begin(), str.end(), str[i]), str.end());
+
+            }    
+        }    
+    }
+   return str;
+}
